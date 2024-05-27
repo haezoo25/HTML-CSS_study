@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figure, figcaption</title>
+</head>
+
+<body>
+    <!-- <figure>와 <figcaption> 태그는 
+    자립형 콘텐츠 (독립적으로 이동하거나 본문에서 제거해도 의미가 유지되는 콘텐츠)를 표시하고 설명하는데 사용된다. 
+    이 두 태그는 특히 이미지, 차트, 코드 블록 등의 시각적 콘텐츠와 그에 대한 설명을 함께 제공할 때 유용하다.
+-->
+
+    <!-- <figure> 태그
+      <figure> 태그는 자립형 콘텐츠를 나타낸다.
+      이는 본문과 독립적으로 배치되거나 이동되어도 그 의미가 유지되는 콘텐츠를 포함할 때 사용된다.
+        
+     -특징-
+     (1). 콘텐츠를 블록 단위로 묶는다.
+     (2). 본문과 독립적으로 의미를 가지므로, 본문에서 제거하거나 이동해도 의미가 달라지지 않는다.
+-->
+
+    <!-- <figcaption> 태그
+     <figcaption> 태그는 <figure> 요소 내에서 사용되며,
+     <figure> 요소의 콘텐츠에 대한 설명이나 캡션을 제공한다.
+     <figcaption> 요소는 <figure> 요소의 첫 번째 자식이나 마지막 자식으로 위치할 수 있다.
+
+     -특징-
+     (1). <figure> 요소에 대한 설명을 제공하는데 사용된다.
+     (2). <figure> 요소 내에서 첫 번째 또는 마지막 자식 요소로 위치할 수 있다.
+-->
+
+    <!-- 예시 -->
+
+    1. 이미지와 캡션
+    <figure>
+        <img src="mountain.jpg" alt="Mountain view">
+        <figcaption>A beautiful view of the mountains.</figcaption>
+    </figure>
+
+    2. 코드 블록과 설명
+    <figure>
+        <pre>
+            <code>
+                function helloWorld() {
+                    console.log('Hello, world!');
+                }
+            </code>
+        </pre>
+        <figcaption>JavaScript function that prints "Hello, world!" to the console.</figcaption>
+    </figure>
+
+    3. 비디오와 설명
+    <figure>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Sample video demonstrating HTML5 video capabilities.</figcaption>
+    </figure>
+
+    <!-- 스타일링
+        <figure>와 <figcaption> 요소는 기본적으로 블록 게벨 요소이다.
+        CSS를 사용하여 스타일을 지정할 수 있다.
+
+    · 예시 스타일링
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure and Figcaption Example</title>
+    <style>
+        figure { display: inline-block; border: 1px solid #ccc; padding: 10px; margin: 20px; text-align: center;}
+        figcaption { margin-top: 10px; font-style: italic; color: #555;}
+    </style>
+    </head>
+
+    <body>
+        <figure>
+            <img src="mountain.jpg" alt="Mountain view" width="300">
+            <figcaption>A beautiful view of the mountains.</figcaption>
+        </figure>
+    </body>
+    </html>
+
+    · 이 예제에서는 <figure> 요소를 테두리와 패딩으로 감싸고, 캡션을 스타일링하여 설명을 강조하였다.
+     -->
+
+    <!-- 활용 예시
+        (1). 이미지 갤러리: 이미지와 그에 대한 설명을 함께 제공하여 사용자가 더 나은 이해를 할 수 있도록 돕는다.
+        (2). 교육 자료: 코드 스니펫, 데이터 차트 등의 콘텐츠와 설명을 함께 제공하여 학습 자료로 활용한다.
+        (3). 미디어 콘텐츠: 비디오나 오디오 파일을 포함하고, 그에 대한 설명을 추가하여 
+                           사용자가 콘텐츠의 맥락을 이해하도록 돕는다.
+    -->
+
+    <!-- <figure>와 <figcaption> 태그를 적절히 사용하면 문서의 가독성을 높이고, 콘텐츠에 대한 이해를 돕는데 유용하다. -->
+
+</body>
+
+</html>
