@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4_position,z-index</title>
+
+    <style>
+        body {margin: 0;}
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .relative {
+            position: relative;
+
+            background-color: yellowgreen;
+            left: 0;
+            top: 0;
+        }
+        .absolute {
+            position: absolute;
+
+            background-color: thistle;
+            left: 100px;
+            top: 100px;
+        }
+        .fixed {
+            position: fixed;
+
+            background-color: tomato;
+            left: 200px;
+            top: 200px;
+        }
+        /* position을 지정할시 사이즈 지정 필수. */
+
+        .fixed_z-index {
+            position: fixed;
+            background-color: brown;
+            width: 50px;
+            height: 50px;
+
+            left: 25px;
+            top: 25px;
+
+            z-index: 10;
+        }
+
+        /* 응용 */
+        .relative_1 {
+            position: relative;
+
+            background-color: teal;
+            left: 0;
+            top: 300px;
+        }
+        .relative_1 .absolute_text {
+            position: absolute;
+            left: 100px;
+        }
+
+        /* nth:child 예시 */
+        .span_group {
+            position: fixed;
+            top: 600px;
+            width: 100%;
+            background-color: none;
+        }
+        .span_group span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: cadetblue;
+        }
+        .span_group span:nth-child(2) {background-color: red;}
+        .span_group span:nth-child(3) {background-color: orange;}
+        .span_group span:nth-child(4) {background-color: yellow;}
+        
+        .span_group span:first-child {}
+        .span_group span:last-child {}
+        /* first-child와 last-child는 되도록 사용하지 않는 것이 좋다. */
+    </style>
+</head>
+<body>
+    <div class="relative"></div>
+    <div class="absolute"></div>
+    <div class="fixed"></div>
+
+    <div class="fixed_z-index"></div>
+
+    <!-- position 응용 -->
+    <div class="relative_1">
+        <p class="absolute_text">absolute text</p>
+    </div>
+
+    <!-- nth:child 예시 -->
+    <div class="span_group">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+</body>
+</html>

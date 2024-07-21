@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css2_display 속성</title>
+
+    <style>
+        div {
+            color: purple;
+            border: 1px solid saddlebrown;
+        }
+        span {
+            color: purple;
+            border: 1px solid saddlebrown;
+        }
+        .inline_block {
+            display: inline-block;
+            width: 200px;
+            color: purple;
+            border: 1px solid saddlebrown;
+        }
+        /* 
+            div -> display: block (기본적으로 크기를 가지고 있으며 한줄씩 차지한다.)
+            span -> display: inline (기본적인 크기 없이 내용에 기준이 맞춰지며 자신의 공간만 차지한다.)
+            display: inline-block (inline의 속성과 block의 속성을 반반씩 가지고 있는 속성.
+                                    한줄을 차지하며 동시에 크기도 지정이 가능하다.
+                                    *단점: 오차가 생겨 공간이 뜬다. 공간을 분리하기위해 주로 사용하지만
+                                           보통 inline-block보다 flex로 처리한다.
+                                           ->HTML의 줄바꿈과 공백 문자 때문인데,
+                                           브라우저는 HTML 코드에서 줄바꿈이나 공백을 인라인 요소 사이의 실제 공백으로 간주합니다.)
+        */
+    </style>
+</head>
+<body>
+    <div>text1</div>
+    <div>text1-2</div>
+
+    <span>text2</span>
+    <span>text2-1</span>
+
+    <br>
+
+    <div class="inline_block">text3</div>
+    <div class="inline_block">text3-1</div>
+</body>
+</html>
