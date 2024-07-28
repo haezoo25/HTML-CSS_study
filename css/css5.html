@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css5_flex</title>
+
+    <style>
+        .box {width: 100px; height: 100px; background-color: blueviolet;}
+        .mb30 {margin-bottom: 30px;}
+
+        .flex1 {display: flex; justify-content: center; gap: 5px; width: 100%; height: 100px;}
+        .flex2 {display: flex; justify-content: flex-start; gap: 5px; width: 100%; height: 100px;}
+        .flex3 {display: flex; justify-content: flex-end; gap: 5px; width: 100%; height: 100px;}
+        .flex4 {display: flex; justify-content: space-between; gap: 5px; width: 100%; height: 100px;}
+        .flex5 {display: flex; justify-content: space-around; gap: 5px; width: 100%; height: 100px;}
+        .flex6 {display: flex; justify-content: space-evenly; gap: 5px; width: 100%; height: 100px;}
+
+        /* 응용 */
+        .flex_1 {display: flex; border: 2px solid red;}
+        .box1 {flex: 1; height: 100px; background-color: cadetblue; border: 1px solid green;}
+
+        .flex_2 {width: 400px; height: 400px; display: flex; flex-wrap: wrap; border: 2px solid red;}
+        .box2 {width: 50%; height: 50%; box-sizing: border-box; background-color: cadetblue; border: 1px solid green;}
+        /* flex-wrap: wrap; -> 요소들이 행을 넘어서 배치되도록 설정 */
+        /* box2에 box-sizing: border-box를 준 이유 ->
+        요소의 크기 계산 방식에 padding과 border를 포함시키기 위해서. 
+        이를 통해 width와 height 값이 요소의 전체 크기를 결정하는 데에 정확히 반영되며, 
+        예상치 못한 크기 증가를 방지할 수 있다. */
+    </style>
+</head>
+<body>
+    <p>justify-content: center;</p>
+    <div class="flex1 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>justify-content: flex-start;</p>
+    <div class="flex2 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>justify-content: flex-end;</p>
+    <div class="flex3 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>justify-content: space-between;</p>
+    <div class="flex4 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>justify-content: space-around;</p>
+    <div class="flex5 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>justify-content: space-evenly;</p>
+    <div class="flex6 mb30">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <hr class="mb30">
+
+    <!-- 응용 -->
+    <p>flex:1</p>
+    <div class="flex_1 mb30">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+
+    <p>flex-wrap: wrap;</p>
+    <div class="flex_2 mb30">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
