@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css6_flex-direction</title>
+
+    <style>
+        .box {
+            background-color: skyblue; border: 2px solid red; width: 100px; height: 100px;
+            margin: 0 auto;
+            /* 마진을 통해 세로정렬은 안됨 */
+        }
+
+        .container_wrap {display: flex; align-items: center; gap: 10px;}
+        .box_container1 {
+            border: 2px solid blue;
+            width: 350px;
+            height: 350px;
+
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .box_container2 {
+            border: 2px solid blue;
+            width: 350px;
+            height: 350px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            gap: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container_wrap">
+        <p style="margin-right: 280px;">display: flex;</p>
+        <p>display: flex; + flex-direction: column;</p>
+    </div>
+    <div class="container_wrap">
+        <div class="box_container1">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    
+        <div class="box_container2">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>

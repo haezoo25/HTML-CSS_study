@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css7_css-animation</title>
+
+    <style>
+        .box {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            animation: box_move ease-in-out 2s infinite;
+        }
+        @keyframes box_move {
+            0% {
+                background-color: skyblue;
+                margin-left: 0px;
+            }
+
+            100% {
+                background-color: blueviolet;
+                margin-left: 200px;
+            }
+        }
+
+        .text_container {
+            width: 100%;
+            overflow: hidden;
+        }
+        .text {
+            width: 1000000000px;
+            font-weight: bold;
+            font-size: 2rem;
+            text-transform: uppercase;
+
+            animation: text_ani 100s linear infinite;
+        }
+        @keyframes text_ani {
+            from {
+
+            }
+
+            to {
+                margin-left: -10000px;
+            }
+        }
+        /* 계속 반복되는 것 같이 보이고 싶다면 animation 속도와 margin 거리를 잘 조율하여 사용할 것 */
+
+        .box_container {
+            margin-left: 50px;
+            display: flex; gap: 50px;
+        }
+
+        .box1 {
+            background-color: blueviolet;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate {
+            from {
+
+            }
+            to {
+                transform: rotate(350deg);
+            }
+        }
+
+        .box2 {
+            background-color: yellowgreen;
+            width: 100px;
+            height: 100px;
+
+            animation: scale 2s linear infinite;
+        }
+        @keyframes scale {
+            from {
+
+            }
+            to {
+                transform: scale(-1);
+            }
+        }
+
+        .box3 {
+            background-color: tomato;
+            width: 100px;
+            height: 100px;
+
+            transition: all ease-in-out 0.3s;
+        }
+        .box3:hover {background-color: black; scale: 1.5; border-radius: 5px;}
+
+        .box4 {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+
+            animation: opacity 2s linear infinite;
+        }
+        @keyframes opacity {
+            from {
+
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <hr style="margin-top: 50px;">
+
+    <div class="text_container">
+        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis numquam eligendi ipsam, commodi consectetur repellat eaque minus beatae, consequatur iste aspernatur quos quasi cumque ipsum! Possimus, aliquid. Enim, numquam expedita.</p>
+    </div>
+
+    <hr style="margin-bottom: 50px;">
+
+    <div class="box_container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <div style="display: flex; gap: 50px; margin-top: 20px; margin-left: 50px;">
+        <p>rotate</p>
+        <p style="margin-left: 50px;">transform: scale</p>
+        <p style="margin-left: 25px;">hover</p>
+        <p style="margin-left: 50px;">opacity</p>
+    </div>
+    
+</body>
+</html>
