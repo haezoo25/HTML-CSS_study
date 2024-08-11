@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css8_@media Rule</title>
+
+    <style>
+        h1, p {text-align: center;}
+        .wrap {box-sizing: border-box; width: 100%; padding: 0 5%; 
+            display: flex; align-items: center; justify-content: center; gap: 15px;}
+        .wrap .box {width: 100%; height: 200px; background-color: yellowgreen;}
+
+        @media only screen and (max-width: 600px) {
+            .wrap {
+                flex-direction: column;
+            }
+        }
+
+        /* 1. 뷰포트의 가로너비가 1025px 이상인 경우 적용 : 데스크탑 환경 */
+        /* @media screen and (min-width: 1025px){ .. } */
+
+        /* 2. 뷰포트의 가로너비가 769px 이상 1024px 이하 : 태블릿 환경 */
+        /* @media screen and (min-width: 769px) and (max-width: 1024){ .. } */
+
+        /* 3. 뷰포트의 가로너비가 768px 이하인 경우 적용 : 모바일 환경 */
+        /* @media screen and (min-width: 768px){ .. } */
+
+        /* 4. 장치가 가로 방향인 경우 적용 */
+        /* @media (orientation: landscape){ .. } */
+
+        /* 5. 장치가 세로 방향인 경우 적용 */
+        /* @media (orientation: portrait){ .. } */
+
+        /* 6. 사용자가 요소 위에 마우스 커서를 올릴 수 있는 환경인지 : 터치 스크린 및 키보드 네비게이션은 불가능 */
+        /* @media (hover: hover){ .. } */
+
+    </style>
+</head>
+<body>
+    <h1>TITLE</h1>
+    <p>화면 가로 사이즈가 600px일 때 상자 세로 배치.</p>
+
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
